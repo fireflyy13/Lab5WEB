@@ -20,6 +20,12 @@
       let pricePerDroid = prompt("What is the cost of one droid? ");
       let customerCredits = prompt("How many credits does the customer have?");
 
+      if (isNaN(quantity) || isNaN(pricePerDroid) || isNaN(customerCredits)) {
+        console.log(
+          "Please enter valid quantity, price per droid and credits!"
+        );
+      }
+
       let result = makeTransaction(quantity, pricePerDroid, customerCredits);
       console(result);
     </script>

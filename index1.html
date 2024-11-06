@@ -18,6 +18,10 @@
         "What is your product's delivery fee to the chosen country?"
       );
 
+      if (isNaN(price) || isNaN(deliveryFee) || !isNaN(country)) {
+        console.log("Please enter valid price and delivery fee!");
+      }
+
       let result = getShippingMessage(country, price, deliveryFee);
       console.log(result);
     </script>

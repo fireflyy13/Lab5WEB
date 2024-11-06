@@ -38,6 +38,10 @@
       let firstArray = firstArrayStr.split(" ");
       let secondArray = secondArrayStr.split(" ");
 
+      if (isNaN(maxLength)) {
+        console.log("Please enter max length!");
+      }
+
       let result = makeArray(firstArray, secondArray, maxLength);
       console.log(result);
     </script>
