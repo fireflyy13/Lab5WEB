@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function makeTransaction(quantity, pricePerDroid, customerCredits) {
+        let totalOrderSum = quantity * pricePerDroid;
+        if (totalOrderSum > customerCredits) {
+          return "Insufficient funds!";
+        }
+
+        return `You ordered ${quantity} droids worth ${totalOrderSum} credits!`;
+      }
+
+      let quantity = prompt("How many droids will the customer order? ");
+      let pricePerDroid = prompt("What is the cost of one droid? ");
+      let customerCredits = prompt("How many credits does the customer have?");
+
+      let result = makeTransaction(quantity, pricePerDroid, customerCredits);
+      console(result);
+    </script>
+  </body>
+</html>

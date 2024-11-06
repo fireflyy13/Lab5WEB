@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function getShippingMessage(country, price, deliveryFee) {
+        let totalPrice = Number(price) + Number(deliveryFee);
+        return `Shipping to ${country} will cost ${totalPrice} credits.`;
+      }
+
+      let country = prompt("Choose a country of shipping: ");
+      let price = prompt("How much does your product cost? ");
+      let deliveryFee = prompt(
+        "What is your product's delivery fee to the chosen country?"
+      );
+
+      let result = getShippingMessage(country, price, deliveryFee);
+      console.log(result);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles5.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="clock">00:00:00</div>
+      <div class="currentDate">dd/mm/yyyy</div>
+      <div class="inputs">
+        <input type="number" id="hourInput" placeholder="00" min="0" max="23" />
+        <input
+          type="number"
+          id="minuteInput"
+          placeholder="00"
+          min="0"
+          max="59"
+        />
+      </div>
+      <div class="date">
+        <input type="number" id="dayInput" placeholder="dd" min="1" max="31" />
+        <input
+          type="number"
+          id="monthInput"
+          placeholder="mm"
+          min="1"
+          max="12"
+        />
+        <input
+          type="number"
+          id="yearInput"
+          placeholder="yyyy"
+          min="24"
+          max="99"
+        />
+      </div>
+
+      <button id="set">Add Alarm</button>
+      <div class="activeAlarms"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function makeArray(firstArray, secondArray, maxLength) {
+        let concatenatedArray = firstArray.concat(secondArray);
+
+        // for (let i = 0; i < length(firstArray); i++) {
+        //   concatenatedArray.push(firstArray[i]);
+        // }
+
+        // for (let i = 0; i < length(secondArray); i++) {
+        //   concatenatedArray.push(secondArray[i]);
+        // }
+
+        if (concatenatedArray.length > maxLength) {
+          return concatenatedArray.slice(0, maxLength);
+        }
+
+        return concatenatedArray;
+      }
+
+      let firstArrayStr = prompt(
+        "Enter the elements of first array separated by spaces: "
+      );
+      let secondArrayStr = prompt(
+        "Enter the elements of second array separated by spaces: "
+      );
+      let maxLength = Number(
+        prompt("What will the max length of a concatenated array be? ")
+      );
+
+      let firstArray = firstArrayStr.split(" ");
+      let secondArray = secondArrayStr.split(" ");
+
+      let result = makeArray(firstArray, secondArray, maxLength);
+      console.log(result);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function findDuplicates(firstArr, secondArr) {
+        let duplicates = [];
+        for (let i = 0; i < firstArr.length; i++) {
+          for (let j = 0; j < secondArr.length; j++) {
+            if (
+              firstArr[i] == secondArr[j] &&
+              !duplicates.includes(firstArr[i])
+            ) {
+              duplicates.push(firstArr[i]);
+            }
+          }
+        }
+        return duplicates;
+      }
+
+      function findMin(arr) {
+        let min = Number.MAX_VALUE;
+        for (let i = 0; i < arr.length; i++) {
+          if (Number(arr[i]) < min) {
+            min = Number(arr[i]);
+          }
+        }
+        return min;
+      }
+
+      function bubbleSort(array, n) {
+        let swapped, temp;
+        for (let i = 0; i < n - 1; i++) {
+          swapped = false;
+          for (let j = 0; j < n - i - 1; j++) {
+            if (array[j] > array[j + 1]) {
+              temp = array[j];
+              array[j] = array[j + 1];
+              array[j + 1] = temp;
+              swapped = true;
+            }
+          }
+
+          if (swapped == false) {
+            break;
+          }
+        }
+        return array;
+      }
+
+      let choice = prompt("Choose a subtask (1 or 2): ");
+
+      if (choice == 1) {
+        let firstArrayStr = prompt(
+          "Enter the elements of first array separated by spaces: "
+        );
+        let secondArrayStr = prompt(
+          "Enter the elements of second array separated by spaces: "
+        );
+        let firstArray = firstArrayStr.split(" ");
+        let secondArray = secondArrayStr.split(" ");
+
+        let duplicates = findDuplicates(firstArray, secondArray);
+        let minDuplicate = findMin(duplicates);
+        alert(minDuplicate);
+      } else if (choice == 2) {
+        let initialArrStr = prompt("Enter the elements to be sorted: ");
+        let initialArr = initialArrStr.split(" ");
+        let msg = `Initial array: ${initialArr}; `;
+        alert;
+        let sorted = bubbleSort(initialArr, initialArr.length);
+        msg += `\nSorted array: ${sorted}`;
+        console.log(msg);
+      }
+    </script>
+  </body>
+</html>
